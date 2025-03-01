@@ -8,3 +8,4 @@ os.environ['SERPER_API_KEY'] = os.getenv('SERPER_API_KEY')
 
 # Initialize the tool for internet searching capabilities
 serper_tool = SerperDevTool()
+

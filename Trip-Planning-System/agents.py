@@ -3,6 +3,10 @@ from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
 from tools import serper_tool
 import os
+import nest_asyncio
+
+# Fix asyncio event loop issues for Streamlit
+nest_asyncio.apply()
 
 load_dotenv()
 
