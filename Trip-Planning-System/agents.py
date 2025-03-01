@@ -2,6 +2,7 @@ from crewai import Agent
 from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
 from tools import serper_tool
+import os
 
 load_dotenv()
 
@@ -9,7 +10,7 @@ load_dotenv()
 llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash",
                              verbose=True, # Getting all details
                              termperature=0.5, # Randomness
-                             google_api_key=os.getenv(GOOGLE_API_KEY))
+                             google_api_key = os.getenv("GOOGLE_API_KEY"))
 
 # Destination Recommender Agent
 destination_recommender = Agent(
